@@ -1,6 +1,9 @@
 import IconSwitch from "./IconSwitch";
 import CardsView from "./CardsView";
 import { useState } from "react";
+
+import "./Store.css"
+
 const products = [
   {
     name: "Nike Metcon 2",
@@ -72,17 +75,17 @@ const view_module = (
 );
 
 function Store() {
-  let [state, setState] = useState(view_module);
+  let [state, setState] = useState(view_list);
   
   
   const click = () => {
     setState(
-      state === view_module ? (state = view_list) : (state = view_module)
+      state === view_list ? (state = view_module) : (state = view_list)
     );
   };
 
   return (
-    <main>
+    <main className="main">
       <IconSwitch icon={state} onSwitch={click} />
       <CardsView cards={products} />
     </main>

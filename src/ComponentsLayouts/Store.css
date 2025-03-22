@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.iconSwitch {
+    display: block;
+    text-align: right;
+    padding-top: 15px;
+    background-color: black;
+}
+
+.ShopCard {
+    padding-top: 50px;
+
+    list-style-type: none;
+
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+
+    text-align: center;
+}
+
+.ShopCard > li > img {
+    width: 75%;
+}
