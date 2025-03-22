@@ -1,9 +1,13 @@
-import Portfolio from "./Components/Portfolio";
+// import Portfolio from "./ComponentsFilter/Portfolio";
+import Store from "./ComponentsLayouts/Store"
+
+
 function App() {
   return (
     <>
     <div className="App">
-      <Portfolio />
+      <Store/>
+      {/* <Portfolio /> */}
     </div>
     </>
   );
