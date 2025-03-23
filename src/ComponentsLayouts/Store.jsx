@@ -1,8 +1,9 @@
 import IconSwitch from "./IconSwitch";
 import CardsView from "./CardsView";
+import ListView from "./ListView";
 import { useState } from "react";
 
-import "./Store.css"
+import "./Store.css";
 
 const products = [
   {
@@ -76,18 +77,15 @@ const view_module = (
 
 function Store() {
   let [state, setState] = useState(view_list);
-  
-  
+
   const click = () => {
-    setState(
-      state === view_list ? (state = view_module) : (state = view_list)
-    );
+    setState(state === view_list ? (state = view_module) : (state = view_list));
   };
 
   return (
     <main className="main">
       <IconSwitch icon={state} onSwitch={click} />
-      <CardsView cards={products} />
+      {state === view_list ? <CardsView cards={products} /> : <ListView items ={products}/>}
     </main>
   );
 }

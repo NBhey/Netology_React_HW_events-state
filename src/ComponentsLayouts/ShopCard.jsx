@@ -1,6 +1,5 @@
 const ShopCard = ({card}) => {
-    console.log(card)
-
+    
     return (
         card.map((el, index) => {
             return <li key={index}>
